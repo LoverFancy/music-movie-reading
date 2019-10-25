@@ -28,7 +28,8 @@ module.exports = {
         detailUrl:'http://t.yushu.im/v2/book/id/%s',
         keywordUrl:'http://t.yushu.im/v2/book/search?q=%s&start=%s&count=%s&summary=%s'
     },
-    host:'http://localhost:3000/'
+    host:'http://localhost:3000/',
+    imgHost:'http://49.232.154.92:3000/'
 }
 // GET 
 // https://api.weixin.qq.com/sns/jscode2session?appid=APPID&secret=SECRET&js_code=JSCODE&grant_type=authorization_code
