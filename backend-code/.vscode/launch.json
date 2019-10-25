@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "nodemon",
+            // win下全局安装即可
+            // "runtimeExecutable": "nodemon",
+            // mac下设置环境变量
+            "runtimeExecutable": "/Users/jason/.nvm/versions/node/v10.13.0/bin/nodemon",
+            // "program": "${workspaceFolder}/testAPI.js",
+            "program": "${workspaceFolder}/app.js",
+            "restart": true,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/index.js"
+        }
+    ]
+}

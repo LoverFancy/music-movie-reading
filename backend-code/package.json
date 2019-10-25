@@ -1,0 +1,39 @@
+{
+  "name": "koa2-island",
+  "version": "1.0.0",
+  "description": "Node.js+KOA2 Little Reader API开发",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "basic-auth": "^2.0.1",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "lodash": "^4.17.15",
+    "module-alias": "^2.2.1",
+    "mysql2": "^1.6.5",
+    "require-directory": "^2.1.1",
+    "sequelize": "^5.13.0",
+    "validator": "^11.1.0"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@app": "app",
+    "@config": "config",
+    "@core": "core",
+    "@middlewares": "middlewares",
+    "@lib": "app/lib",
+    "@models": "app/models",
+    "@services": "app/services",
+    "@validators": "app/validators"
+  }
+}

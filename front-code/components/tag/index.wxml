@@ -1,0 +1,8 @@
+<view bind:tap="onTap" class="container tag-class ">
+    <!-- <slot name="before"></slot> -->
+    <text >{{text}}</text>
+    <!-- slot可以灵活决定外部是否传入slot名字:相当于由外部向内部传入标签 -->
+    <slot name="after"></slot>
+</view>
+
+<!-- 普通样式 外部样式 -->
