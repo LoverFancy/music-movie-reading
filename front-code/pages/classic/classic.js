@@ -37,15 +37,15 @@ Component({
       // getlatest是个异步的方法，不能通过同步的方法接收请求的结果
       // let latest = classicModel.getLatest() // 同步方法是不行的
       // 此处通过回调函数的方式接收异步返回的结果，更好的方式是使用promise和async/await方法
-      classicModel.getLatest((res) => {
-        // 验证token是否合法，不合法则更新token
-        const verifyToken = new Token().verifyToken()
-        this.setData({
-          classic: res,
-          likeCount: res.fav_nums,
-          likeStatus: res.like_status
+        classicModel.getLatest((res) => {
+          // 验证token是否合法，不合法则更新token
+          // const verifyToken = new Token().verifyToken()
+          this.setData({
+            classic: res,
+            likeCount: res.fav_nums,
+            likeStatus: res.like_status
+          })
         })
-      })
       // promise方式
       // classicModel.getLatest().then(res => {
       //   this.setData({

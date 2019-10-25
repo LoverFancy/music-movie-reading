@@ -6,18 +6,23 @@ from '../util/http.js'
 class ClassicModel extends HTTP {
     // sCallback是接收请求结果并处理的回调函数
     getLatest(sCallback) {
+      // 延时是为了保证token先被获取
+      setTimeout(() => {
         // 调用HTTP类的方法
         this.request({
-            url: 'classic/latest',
-            success: (res) => {
-                sCallback(res)
-                // 存储latest的index
-                this._setLatestIndex(res.index)
-                let key = this._getKey(res.index)
-                // 存储当前的期刊信息
-                wx.setStorageSync(key, res)
-            }
+          url: 'classic/latest',
+          success: (res) => {
+            // console.log(res)
+            sCallback(res)
+            // 存储latest的index
+            this._setLatestIndex(res.index)
+            let key = this._getKey(res.index)
+            // 存储当前的期刊信息
+            wx.setStorageSync(key, res)
+          }
         })
+      },1000)
+        
     }
     // getLatest(){
     //   return this.request({
