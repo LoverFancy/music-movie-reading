@@ -25,6 +25,7 @@ class HTTP{
             },
             // 箭头函数避免this指向
             success:(res)=>{
+              console.log(res)
                 // 转化为字符串
                 let code = res.statusCode.toString()
                 if (code.startsWith('2')){

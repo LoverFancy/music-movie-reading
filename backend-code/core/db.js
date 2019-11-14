@@ -62,8 +62,8 @@ Model.prototype.toJSON = function(){
             // 非网络资源图片
             if(!data[key].startsWith('http')){
                 // img进行拼接非常特殊
-                // data[key] = global.config.host + data[key]
-                data[key] = global.config.imgHost + data[key]
+                data[key] = global.config.host + data[key]
+                // data[key] = global.config.imgHost + data[key]
             }
         }
     }
